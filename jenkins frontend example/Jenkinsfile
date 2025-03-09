@@ -114,7 +114,7 @@ pipeline {
     stage('Deploy to Remote Server') {
       steps {
         script {
-          def targetDir = "/home/faisalilhami/mini-soccer-project/mini-soccer-fe"
+          def targetDir = "/home/ubuntu/mini-soccer-project/mini-soccer-fe"
           def sshCommandToServer = """
           ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${USERNAME}@${HOST} '
             if [ -d "${targetDir}/.git" ]; then

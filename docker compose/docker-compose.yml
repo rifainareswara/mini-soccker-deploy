@@ -45,17 +45,17 @@ services:
       - KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS=kafka:19092
       - KAFKA_CLUSTERS_0_ZOOKEEPER_CONNECT=zookeeper:2181
 
-#  postgres:
-#   container_name: postgres
-#   image: postgres:latest
-#   environment:
-#     POSTGRES_USER: root
-#     POSTGRES_PASSWORD: barca1899
-#   ports:
-#     - "5432:5432"
-#   volumes:
-#     - postgresql:/var/lib/postgresql
-#     - postgresql_data:/var/lib/postgresql/data
+  postgres:
+   container_name: postgres
+   image: postgres:latest
+   environment:
+     POSTGRES_USER: root
+     POSTGRES_PASSWORD: barca1899
+   ports:
+     - "54322:5432"
+   volumes:
+     - postgresql:/var/lib/postgresql
+     - postgresql_data:/var/lib/postgresql/data
 
   pgadmin:
    container_name: pgadmin
